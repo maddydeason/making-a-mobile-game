@@ -7,6 +7,19 @@ window.addEventListener("load",function() {
   //keep the game going
   var gameLive = true;
 
+  /*
+
+  /////////////////////////////////////////////////////
+
+  CHALLENGE - Add enemies to the game
+
+  Add two new enemies:
+
+  -enemy on 300 for x, 100 for y, speed of 1. keep same w and h
+  -enemy on 140 for x, 300 for y, speed of 1. keep same w and h
+
+  */
+
   //enemies
   var enemies = [
     {
@@ -36,22 +49,26 @@ window.addEventListener("load",function() {
       speedY: 5,
       w: 40,
       h: 40
+    },
+    {
+      x: 300,
+      y: 100,
+      speedY: 1,
+      w: 40,
+      h: 40
+    },
+    {
+      x: 140,
+      y: 300,
+      speedY: 1,
+      w: 40,
+      h: 40
     }
   ];
 
+  /////////////////////////////////////////////////////
+
   //the player object
-  /**
-  /////////////////////////////////////////////////
-
-  CHALLENGE - Create an object to represent the player
-  
-  -create a variable called player
-
-  -it should be an object with the following properties: x with a value of 10, y with a value of 160, speedX with a value of 2.5, isMoving with a value of 0, w with a value of 40, h with a value of 40.
-  
-  create it bellow, outside of this commenting area!
-  */
-
   var player = {
     x: 10,
     y: 160,
@@ -61,9 +78,6 @@ window.addEventListener("load",function() {
     h: 40
   };
 
-  ////////////////////////////////////////////////
-
-
   //the goal object
   var goal = {
     x: 580,
@@ -71,7 +85,6 @@ window.addEventListener("load",function() {
     w: 50,
     h: 36
   }
-  
 
   var sprites = {};
 
